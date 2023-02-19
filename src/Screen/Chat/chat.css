@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Courgette&family=Lobster&family=M+PLUS+Rounded+1c:wght@800&family=Open+Sans:ital,wght@0,300;1,300&family=Pacifico&family=Ubuntu:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chat-screen-main {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #89C4E1;
+}
+
+/* <><><><><><<><><> Chat Friends Styling <><><><><><><><><> */
+
+.chat-friends-main {
+    width: 40rem;
+    height: 98vh;
+    /* border: 1px solid red; */
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* z-index: 2; */
+}
+
+.top-header {
+    width: 100%;
+    height: 4rem;
+    /* border: 1px solid red; */
+    border-bottom: 2px solid blue;
+    padding: 10px;
+    font-family: 'Courgette', cursive;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo-div {
+    width: auto;
+    height: auto;
+}
+
+.header-left-div {
+    width: 7rem;
+    height: 4rem;
+    /* border: 1px solid black; */
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-pic-div {
+    width: 3rem;
+    height: 3rem;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+}
+
+.menu-icon-div {
+    width: 2.5rem;
+    height: 2.5rem;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    padding: 4.4px;
+    transition: 0.3s;
+}
+
+.menu-icon-div:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.chat-main-main {
+    width: 99%;
+    height: 89%;
+    /* margin-left: 2.5%;
+    margin-right: 2.5%; */
+    border: 1px solid red;
+}
+
+.pre-chatroom-main {
+    width: 100%;
+    height: 10vh;
+    /* border: 1px solid red; */
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dotted blue;
+    transition: 0.2s;
+}
+
+.pre-chatroom-main:hover {
+    background-color: #e8f0fe;
+    border: none;
+    border-bottom: 2px dotted blue;
+    border-radius: 10px;
+}
+
+.pc-profile-image-div {
+    width: 3.5rem;
+    height: 100%;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+}
+
+.pc-profile-img {
+    width: 100%;
+    height: 100%;
+}
+
+.pc-info-div {
+    width: 91%;
+    height: 100%;
+    /* border: 1px solid green; */
+    padding: 5px;
+}
+
+.pc-name {
+    /* font-weight: bolder; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* #menu-icon {
+    width: 2rem;
+    height: 2rem;
+} */
+
+/* ============== Chat Main Styling ==================== */
+
+/*=============== Responsiveness =============== */
+
+@media only screen and (max-width: 768px) {
+    .chat-friends-main {
+        height: 90%;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .chat-friends-main {
+        width: 100%;
+
+    }
+}

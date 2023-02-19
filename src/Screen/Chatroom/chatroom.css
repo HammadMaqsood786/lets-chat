@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chatroom-main-main {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #89C4E1;
+}
+
+.chatroom-header-main {
+    width: 100%;
+    height: 4rem;
+    /* border: 1px solid red; */
+    border-bottom: 2px solid blue;
+    padding: 5px;
+    font-family: 'Courgette', cursive;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    width: 15rem;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.profile-pic {
+    width: 3rem;
+    height: 100%;
+    border: 1px solid red;
+}
+
+
+.chatroom-name {
+    font-size: 22px;
+}
+
+.header-right {
+    width: 7rem;
+    height: 100%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.video-call-icon-div {
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+    /* border: none; */
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.video-call-icon-div:hover {
+    background-color: #b1b1b163;
+}
+
+.video-call-icon {
+    width: 22px;
+    height: 22px;
+    margin-top: 0.8rem;
+    margin-left: 2px;
+
+}
+
+
+.call-icon-div {
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+    /* border: none; */
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.call-icon-div:hover {
+    background-color: #44444463;
+}
+
+.call-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 0.9rem;
+}
+
+.chatroom-messages-div {
+    width: 40rem;
+    height: 98vh;
+    /* border: 1px solid red; */
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+
+/* ========= Responsiveness =========== */
+
+@media only screen and (max-width: 768px) {
+    .chatroom-messages-div {
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .chatroom-name {
+        font-size: 18px;
+    }
+
+    .header-left {
+        width: 13rem;
+    }
+
+    .header-right {
+        width: 5rem;
+    }  
+
+    /* .video-call-icon-div {
+        width: 40%;
+    } */
+
+    .video-call-icon-div {
+        width: 30%;
+    }
+
+    .video-call-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .call-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
