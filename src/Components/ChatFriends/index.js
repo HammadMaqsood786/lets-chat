@@ -73,7 +73,7 @@ function ChatFriends() {
             <img src={profileIcon} className="profile-pic" />
           </div>
 
-          <div className="menu-icon-div" >
+          <div className="menu-icon-div" >  
 
             <Button
               id="demo-positioned-button"
@@ -113,6 +113,7 @@ function ChatFriends() {
       <div className="chat-main-main" onClick={() => navigate('/chatroom')}  >
         <PreChatroom />
       </div>
+         
     </div>
   )
 }
@@ -122,7 +123,7 @@ function PreChatroom() {
   return (
     <div className="pre-chatroom-main" >
         <div className='pc-profile-image-div' >
-          <img  src={profileIcon} className="pc-profile-img" />
+          <img src={profileIcon} className="pc-profile-img" />
         </div>
 
         <div className="pc-info-div" >
@@ -132,5 +133,9 @@ function PreChatroom() {
     </div>
   )
 }
+
+
+
+
 
 export default ChatFriends;
