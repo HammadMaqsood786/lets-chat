@@ -16,7 +16,7 @@ function ChatroomMain() {
 
         <div id='chatroom-footer' >
 
-          <input id='msg-input' />
+          <input id='msg-input' placeholder='Message' />
 
           <button className='send-btn' >
             <img src={sendBtnIcon} id='send-btn-icon' />

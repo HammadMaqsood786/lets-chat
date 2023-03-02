@@ -125,6 +125,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
 }
 
 #msg-input {
@@ -133,7 +134,7 @@
     border: none;
     border-radius: 30px;
     box-shadow: -1px 1px 3px black;
-    padding: 8px;
+    padding: 10px;
     font-size: large;
 }
 

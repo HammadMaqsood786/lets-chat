@@ -9,8 +9,9 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 //Firebase Methods
-import { initializeApp, app, auth } from "../../config/firebase";
+import { initializeApp, app, auth, db } from "../../config/firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import { collection, getDocs } from "firebase/firestore"; // for getting data
 
 function ChatFriends() {
 
@@ -73,7 +74,7 @@ function ChatFriends() {
             <img src={profileIcon} className="profile-pic" />
           </div>
 
-          <div className="menu-icon-div" >  
+          <div className="menu-icon-div" >
 
             <Button
               id="demo-positioned-button"
@@ -110,27 +111,60 @@ function ChatFriends() {
         </div>
       </header>
 
-      <div className="chat-main-main" onClick={() => navigate('/chatroom')}  >
+      <div className="chat-main-main">
         <PreChatroom />
       </div>
-         
+
     </div>
   )
 }
 
 function PreChatroom() {
 
-  return (
-    <div className="pre-chatroom-main" >
-        <div className='pc-profile-image-div' >
-          <img src={profileIcon} className="pc-profile-img" />
-        </div>
+  const [usersDataState, setUsersDataState] = useState([]);
 
-        <div className="pc-info-div" >
-            <h4 className="pc-name" >Hammad Maqsood</h4>
+  const navigate = useNavigate();
+  
+  // const usersData = [];
+  
+  useEffect(() => {
+    getttingAllCollections();
+  }, [])
+
+
+  const getttingAllCollections = async () => {
+    const querySnapshot = await getDocs(collection(db, "users"));
+    const usersData = [];
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+      // console.log("Users Data ===>", doc.data())
+      usersData.push(doc.data());
+      setUsersDataState(usersData)
+      console.log("Users Data Array", usersData)
+      // setUsersData(doc.data())
+      // usersData = doc.data();
+      // console.log("Users Data", usersData);
+    });
+  }
+
+  console.log("users data state ===>", usersDataState);
+
+
+  return (
+    <>
+      { usersDataState.map ((users) => (
+        < div className="pre-chatroom-main" onClick={() => navigate('/chatroom')} >
+          <div className='pc-profile-image-div' >
+            <img src={profileIcon} className="pc-profile-img" />
+          </div>
+
+          <div className="pc-info-div" >
+            <h4 className="pc-name" >{users.fullName}</h4>
             <p className="pc-message" >Assalam o Allaikum kesy han aap</p>
-        </div>
-    </div>
+          </div>
+        </div >
+      ))}
+    </>
   )
 }
 
